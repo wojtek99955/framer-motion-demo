@@ -1,10 +1,11 @@
 import GlobalStyle from "./assets/globalStyle/globalStyle";
-
+import StartPage from "./components/StartPage";
 function App() {
   return (
-    <div className="App">
+    <>
       <GlobalStyle />
-    </div>
+      <StartPage />
+    </>
   );
 }
 
