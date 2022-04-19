@@ -35,8 +35,6 @@ function App() {
   const previousPage = () => {
     setPage((prev) => prev - 1);
   };
-
-  console.log(page);
   return (
     <>
       <GlobalStyle />

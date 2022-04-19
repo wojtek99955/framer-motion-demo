@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Container = styled.div`
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: white;
   }
   ul {
@@ -13,6 +13,8 @@ const Container = styled.div`
     list-style-type: none;
     margin-bottom: 1rem;
     color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 `;
 
@@ -25,13 +27,21 @@ const burgerTypes = [
   "BigBurger",
 ];
 
-function BurgerType() {
+function BurgerType({ customBurger, setCustomBurger }) {
   return (
     <Container>
-      <h1>BurgerType</h1>
+      <h1>Burger Type</h1>
       <ul>
         {burgerTypes.map((type, id) => {
-          return <li key={id}>{type}</li>;
+          return (
+            <motion.li
+              key={id}
+              onClick={() => setCustomBurger({ ...customBurger, type: type })}
+              whileHover={{ scale: 1.3, originX: 0 }}
+            >
+              {type}
+            </motion.li>
+          );
         })}
       </ul>
     </Container>
