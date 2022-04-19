@@ -30,12 +30,16 @@ const burgerTypes = [
 function BurgerType({ customBurger, setCustomBurger }) {
   return (
     <Container>
-      <h1>Burger Type</h1>
+      <motion.h1 initial={{ x: "-100vw" }} animate={{ x: 0 }}>
+        Burger Type
+      </motion.h1>
       <ul>
         {burgerTypes.map((type, id) => {
           return (
             <motion.li
               key={id}
+              initial={{ x: "-100vw" }}
+              animate={{ x: 0 }}
               onClick={() => setCustomBurger({ ...customBurger, type: type })}
               whileHover={{ scale: 1.3, originX: 0 }}
             >
