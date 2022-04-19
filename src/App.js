@@ -44,7 +44,7 @@ function App() {
         {page > 0 ? (
           <BtnsContainer>
             <button onClick={previousPage}>Prev</button>
-            <button onClick={nextPage} disabled={page === 3 ? true : false}>
+            <button onClick={nextPage} disabled={page === 4 ? true : false}>
               Next
             </button>
           </BtnsContainer>

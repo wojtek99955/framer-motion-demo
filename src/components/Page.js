@@ -3,6 +3,7 @@ import BurgerType from "./BurgerType";
 import Toppings from "./Toppings";
 import { useState } from "react";
 import Sauces from "./Sauces";
+import Order from "./Order";
 
 function Page({ page, nextPage, PreviousPage }) {
   const [customBurger, setCustomBurger] = useState({
@@ -40,6 +41,15 @@ function Page({ page, nextPage, PreviousPage }) {
   } else if (page === 3) {
     return (
       <Sauces
+        customBurger={customBurger}
+        setCustomBurger={setCustomBurger}
+        nextPage={nextPage}
+        PreviousPage={PreviousPage}
+      />
+    );
+  } else if (page === 4) {
+    return (
+      <Order
         customBurger={customBurger}
         setCustomBurger={setCustomBurger}
         nextPage={nextPage}

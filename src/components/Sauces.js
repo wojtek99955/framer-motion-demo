@@ -13,6 +13,10 @@ const Container = styled.div`
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
+
+    &:hover {
+      color: #6e3301;
+    }
   }
 `;
 

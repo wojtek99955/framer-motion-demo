@@ -47,8 +47,6 @@ function Toppings({ customBurger, setCustomBurger }) {
           );
         })}
       </ul>
-      <p>{customBurger.type}</p>
-      <h3>{customBurger.toppings}</h3>
     </Container>
   );
 }

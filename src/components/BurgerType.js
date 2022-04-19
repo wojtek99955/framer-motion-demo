@@ -49,7 +49,6 @@ function BurgerType({ customBurger, setCustomBurger }) {
           );
         })}
       </ul>
-      <h2>{customBurger.type}</h2>
     </Container>
   );
 }
