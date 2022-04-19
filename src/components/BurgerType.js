@@ -39,13 +39,18 @@ function BurgerType({ customBurger, setCustomBurger, nextPage }) {
           return (
             <motion.li
               key={id}
-              initial={{ x: "-100vw" }}
-              animate={{ x: 0 }}
+              initial={{ x: "-100vw", opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
               onClick={() => {
                 nextPage();
                 setCustomBurger({ ...customBurger, type: type });
               }}
-              whileHover={{ scale: 1.3, originX: 0, color: "#6e3301" }}
+              whileHover={{
+                scale: 1.2,
+                originX: 0,
+                color: "#6e3301",
+              }}
+              transition={{ type: "spring", stiffness: 200 }}
             >
               {type}
             </motion.li>

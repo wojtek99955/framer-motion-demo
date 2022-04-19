@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import Page from "./components/Page";
 import Header from "./components/Header";
+import { motion } from "framer-motion";
 
 const Section = styled.section`
   height: 100vh;
@@ -39,15 +40,26 @@ function App() {
     <>
       <GlobalStyle />
       <Header />
-      <Section>
+      <Section
+        as={motion.section}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.5 }}
+      >
         <Page page={page} nextPage={nextPage} previousPage={previousPage} />
         {page === 0 ? <button onClick={nextPage}>Next Step</button> : null}
         {page > 0 ? (
           <BtnsContainer>
-            <button onClick={previousPage}>Prev</button>
-            <button onClick={nextPage} disabled={page === 4 ? true : false}>
+            <motion.button whileHover={{ scale: 1.2 }} onClick={previousPage}>
+              Prev
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.2 }}
+              onClick={nextPage}
+              disabled={page === 4 ? true : false}
+            >
               Next
-            </button>
+            </motion.button>
           </BtnsContainer>
         ) : null}
       </Section>

@@ -32,7 +32,12 @@ function Sauces({ customBurger, setCustomBurger, nextPage }) {
                 setCustomBurger({ ...customBurger, sauce: sauce });
               }}
               key={id}
-              whileHover={{ scale: 1.3, originX: 0, color: "#6e3301" }}
+              whileHover={{
+                scale: 1.2,
+                originX: 0,
+                color: "#6e3301",
+              }}
+              transition={{ type: "spring", stiffness: 200 }}
             >
               {sauce}
             </motion.li>

@@ -43,7 +43,12 @@ function Toppings({ customBurger, setCustomBurger, nextPage }) {
                   toppings: [...customBurger.toppings, item],
                 });
               }}
-              whileHover={{ scale: 1.3, originX: 0, color: "#6e3301" }}
+              whileHover={{
+                scale: 1.2,
+                originX: 0,
+                color: "#6e3301",
+              }}
+              transition={{ type: "spring", stiffness: 200 }}
             >
               {item}
             </motion.li>
