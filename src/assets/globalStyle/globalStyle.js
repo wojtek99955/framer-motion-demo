@@ -8,6 +8,9 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
+body{
+      background-color: #fc811b;
+}
 `;
 
 export default GlobalStyle;

@@ -2,9 +2,9 @@ import GlobalStyle from "./assets/globalStyle/globalStyle";
 import styled from "styled-components";
 import { useState } from "react";
 import Page from "./components/Page";
+import Header from "./components/Header";
 
 const Section = styled.section`
-  background-color: #fc811b;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -38,6 +38,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
+      <Header />
       <Section>
         <Page page={page} nextPage={nextPage} previousPage={previousPage} />
         {page === 0 ? <button onClick={nextPage}>Next Step</button> : null}
