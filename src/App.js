@@ -28,7 +28,7 @@ const BtnsContainer = styled.div`
 `;
 
 function App() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   const nextPage = () => {
     setPage((prev) => prev + 1);
   };
@@ -44,7 +44,7 @@ function App() {
         {page > 0 ? (
           <BtnsContainer>
             <button onClick={previousPage}>Prev</button>
-            <button onClick={nextPage} disabled={page === 2 ? true : false}>
+            <button onClick={nextPage} disabled={page === 3 ? true : false}>
               Next
             </button>
           </BtnsContainer>

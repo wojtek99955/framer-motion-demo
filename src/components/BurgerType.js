@@ -28,6 +28,7 @@ const burgerTypes = [
 ];
 
 function BurgerType({ customBurger, setCustomBurger }) {
+  console.log(customBurger);
   return (
     <Container>
       <motion.h1 initial={{ x: "-100vw" }} animate={{ x: 0 }}>
@@ -48,6 +49,7 @@ function BurgerType({ customBurger, setCustomBurger }) {
           );
         })}
       </ul>
+      <h2>{customBurger.type}</h2>
     </Container>
   );
 }
