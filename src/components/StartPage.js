@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import burger from "../assets/img/burger.png";
 
 const Section = styled.section`
   background-color: #fc811b;
@@ -23,12 +24,17 @@ const Main = styled.main`
     border-radius: 12px;
     font-weight: 600;
   }
+  img {
+    margin: auto;
+    display: block;
+  }
 `;
 
 function StartPage() {
   return (
     <Section>
       <Main>
+        <img src={burger} alt="" srcset="" />
         <h1>Create Your Burger</h1>
         <button>Create Now</button>
       </Main>
