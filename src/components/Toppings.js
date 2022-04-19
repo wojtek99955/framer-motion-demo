@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   h1 {
@@ -17,7 +18,7 @@ const Container = styled.div`
   }
 `;
 
-function Toppings({ customBurger, setCustomBurger }) {
+function Toppings({ customBurger, setCustomBurger, nextPage }) {
   const toppingss = [
     "tomato",
     "onion",
@@ -33,17 +34,19 @@ function Toppings({ customBurger, setCustomBurger }) {
       <ul>
         {toppingss.map((item, id) => {
           return (
-            <li
+            <motion.li
               key={id}
               onClick={() => {
+                nextPage();
                 setCustomBurger({
                   ...customBurger,
                   toppings: [...customBurger.toppings, item],
                 });
               }}
+              whileHover={{ scale: 1.3, originX: 0, color: "#6e3301" }}
             >
               {item}
-            </li>
+            </motion.li>
           );
         })}
       </ul>

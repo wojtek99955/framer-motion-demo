@@ -17,7 +17,6 @@ function Page({ page, nextPage, PreviousPage }) {
         customBurger={customBurger}
         setCustomBurger={setCustomBurger}
         nextPage={nextPage}
-        PreviousPage={PreviousPage}
       />
     );
   } else if (page === 1) {
@@ -26,7 +25,6 @@ function Page({ page, nextPage, PreviousPage }) {
         customBurger={customBurger}
         setCustomBurger={setCustomBurger}
         nextPage={nextPage}
-        PreviousPage={PreviousPage}
       />
     );
   } else if (page === 2) {
@@ -35,7 +33,6 @@ function Page({ page, nextPage, PreviousPage }) {
         customBurger={customBurger}
         setCustomBurger={setCustomBurger}
         nextPage={nextPage}
-        PreviousPage={PreviousPage}
       />
     );
   } else if (page === 3) {
@@ -53,7 +50,6 @@ function Page({ page, nextPage, PreviousPage }) {
         customBurger={customBurger}
         setCustomBurger={setCustomBurger}
         nextPage={nextPage}
-        PreviousPage={PreviousPage}
       />
     );
   }

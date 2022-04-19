@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 const Container = styled.div`
   h1 {
     font-size: 4rem;
@@ -13,14 +15,10 @@ const Container = styled.div`
     color: white;
     font-size: 1.5rem;
     cursor: pointer;
-
-    &:hover {
-      color: #6e3301;
-    }
   }
 `;
 
-function Sauces({ customBurger, setCustomBurger }) {
+function Sauces({ customBurger, setCustomBurger, nextPage }) {
   const sauces = ["Ketchup", "Mayonnaise", "Dijonnaise", "Sriracha", "Garlic"];
   return (
     <Container>
@@ -28,14 +26,16 @@ function Sauces({ customBurger, setCustomBurger }) {
       <ul>
         {sauces.map((sauce, id) => {
           return (
-            <li
+            <motion.li
               onClick={() => {
+                nextPage();
                 setCustomBurger({ ...customBurger, sauce: sauce });
               }}
               key={id}
+              whileHover={{ scale: 1.3, originX: 0, color: "#6e3301" }}
             >
               {sauce}
-            </li>
+            </motion.li>
           );
         })}
       </ul>

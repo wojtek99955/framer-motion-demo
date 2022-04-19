@@ -27,7 +27,7 @@ const burgerTypes = [
   "BigBurger",
 ];
 
-function BurgerType({ customBurger, setCustomBurger }) {
+function BurgerType({ customBurger, setCustomBurger, nextPage }) {
   console.log(customBurger);
   return (
     <Container>
@@ -41,8 +41,11 @@ function BurgerType({ customBurger, setCustomBurger }) {
               key={id}
               initial={{ x: "-100vw" }}
               animate={{ x: 0 }}
-              onClick={() => setCustomBurger({ ...customBurger, type: type })}
-              whileHover={{ scale: 1.3, originX: 0 }}
+              onClick={() => {
+                nextPage();
+                setCustomBurger({ ...customBurger, type: type });
+              }}
+              whileHover={{ scale: 1.3, originX: 0, color: "#6e3301" }}
             >
               {type}
             </motion.li>
