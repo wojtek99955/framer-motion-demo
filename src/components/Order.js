@@ -15,6 +15,7 @@ const OrderContainer = styled.div`
   padding: 4rem 2rem;
   border-radius: 10px;
   max-width: 600px;
+  margin: auto;
   h2 {
     font-size: 2rem;
     margin: 2rem 0;
@@ -27,6 +28,8 @@ const OrderContainer = styled.div`
     font-size: 1.3rem;
   }
   button {
+    border: 3px solid #fc811b;
+    background-color: white;
   }
 `;
 
@@ -42,7 +45,11 @@ function Order({ customBurger }) {
         <h2>{customBurger.type}</h2>
         <p>Toppings: {customBurger.toppings.join(", ")}</p>
         <p>Sauce: {customBurger.sauce}</p>
-        <button>Checkout</button>
+        <motion.button
+          whileHover={{ backgroundColor: "#fc811b", color: "white" }}
+        >
+          Checkout
+        </motion.button>
       </OrderContainer>
     </Container>
   );
