@@ -28,7 +28,6 @@ const OrderContainer = styled.div`
     font-size: 1.3rem;
   }
   button {
-    border: 3px solid #fc811b;
     background-color: white;
   }
 `;
@@ -46,6 +45,7 @@ function Order({ customBurger }) {
         <p>Toppings: {customBurger.toppings.join(", ")}</p>
         <p>Sauce: {customBurger.sauce}</p>
         <motion.button
+          initial={{ border: "3px solid #fc811b" }}
           whileHover={{ backgroundColor: "#fc811b", color: "white" }}
         >
           Checkout

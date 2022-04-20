@@ -27,7 +27,6 @@ function Toppings({ customBurger, setCustomBurger, nextPage }) {
     "double meat",
     "cucumber",
     "becon",
-    "double vegan meat",
   ];
   return (
     <Container

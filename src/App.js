@@ -26,11 +26,16 @@ const Section = styled.section`
 const BtnsContainer = styled.div`
   display: flex;
   gap: 2rem;
+  margin-top: 2rem;
+  button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
 `;
 
 const PagesContainer = styled.div`
   width: 700px;
-  height: 600px;
+  height: 450px;
 `;
 function App() {
   const [page, setPage] = useState(0);

@@ -13,6 +13,7 @@ const Main = styled.main`
     margin: auto;
     display: block;
     margin-bottom: 3rem;
+    width: 350px;
   }
 `;
 
