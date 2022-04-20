@@ -53,7 +53,17 @@ function App() {
         <PagesContainer>
           <Page page={page} nextPage={nextPage} previousPage={previousPage} />
         </PagesContainer>
-        {page === 0 ? <button onClick={nextPage}>Next Step</button> : null}
+        {page === 0 ? (
+          <motion.button
+            whileHover={{
+              scale: [1, 1.2, 1],
+              transition: { yoyo: Infinity, duration: 0.6 },
+            }}
+            onClick={nextPage}
+          >
+            Next Step
+          </motion.button>
+        ) : null}
         {page > 0 ? (
           <BtnsContainer>
             <motion.button whileHover={{ scale: 1.2 }} onClick={previousPage}>
