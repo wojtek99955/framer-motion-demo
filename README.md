@@ -6,7 +6,7 @@ A simple burger creator app with framer motion library
 
 ## Live
 
-Link:
+Link: https://wojtekk-burger-creator.netlify.app/
 
 ## Technologies
 
