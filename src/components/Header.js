@@ -17,6 +17,15 @@ const StyledHeader = styled.header`
     margin-left: 2rem;
   }
 `;
+const svgVariants = {
+  from: {
+    rotate: 120,
+  },
+  to: {
+    rotate: 0,
+    transition: { duration: 1 },
+  },
+};
 const pathCircleVariants = {
   from: {
     opacity: 0,
@@ -34,7 +43,10 @@ const pathCircleVariants = {
 function Header() {
   return (
     <StyledHeader>
-      <svg
+      <motion.svg
+        variants={svgVariants}
+        initial="from"
+        animate="to"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -51,7 +63,7 @@ function Header() {
           strokeWidth={2}
           d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
         />
-      </svg>
+      </motion.svg>
       <motion.h2 initial={{ y: -300 }} animate={{ y: 0 }}>
         Premium Burgers
       </motion.h2>
