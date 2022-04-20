@@ -5,6 +5,7 @@ const Container = styled.div`
   h1 {
     font-size: 4rem;
     color: white;
+    text-align: center;
   }
   ul {
     margin: 2rem 0;
@@ -21,7 +22,11 @@ const Container = styled.div`
 function Sauces({ customBurger, setCustomBurger, nextPage }) {
   const sauces = ["Ketchup", "Mayonnaise", "Dijonnaise", "Sriracha", "Garlic"];
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial={{ x: "-100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+    >
       <h1>Choose Sauce</h1>
       <ul>
         {sauces.map((sauce, id) => {

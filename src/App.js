@@ -28,6 +28,10 @@ const BtnsContainer = styled.div`
   gap: 2rem;
 `;
 
+const PagesContainer = styled.div`
+  width: 700px;
+  height: 600px;
+`;
 function App() {
   const [page, setPage] = useState(0);
   const nextPage = () => {
@@ -46,7 +50,9 @@ function App() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <Page page={page} nextPage={nextPage} previousPage={previousPage} />
+        <PagesContainer>
+          <Page page={page} nextPage={nextPage} previousPage={previousPage} />
+        </PagesContainer>
         {page === 0 ? <button onClick={nextPage}>Next Step</button> : null}
         {page > 0 ? (
           <BtnsContainer>

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -31,7 +32,11 @@ const OrderContainer = styled.div`
 
 function Order({ customBurger }) {
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial={{ x: "-100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+    >
       <h1>Your Order</h1>
       <OrderContainer>
         <h2>{customBurger.type}</h2>

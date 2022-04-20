@@ -5,6 +5,7 @@ const Container = styled.div`
   h1 {
     font-size: 4rem;
     color: white;
+    text-align: center;
   }
   ul {
     margin: 2rem 0;
@@ -29,7 +30,11 @@ function Toppings({ customBurger, setCustomBurger, nextPage }) {
     "double vegan meat",
   ];
   return (
-    <Container>
+    <Container
+      as={motion.div}
+      initial={{ x: "-100vw", opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+    >
       <h1>Choose Toppings</h1>
       <ul>
         {toppingss.map((item, id) => {
