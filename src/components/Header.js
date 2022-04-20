@@ -65,7 +65,7 @@ function Header() {
         />
       </motion.svg>
       <motion.h2 initial={{ y: -300 }} animate={{ y: 0 }}>
-        Premium Burgers
+        Sunny Burgers
       </motion.h2>
     </StyledHeader>
   );
