@@ -14,6 +14,10 @@ Link: https://wojtekk-burger-creator.netlify.app/
 - styled-components
 - framer-motion
 
+## Screenshots
+
+![burgerapp](https://i.ibb.co/GJrkn6n/sunny-burgers.png)
+
 ## Installation
 
 Download or clone the repository
